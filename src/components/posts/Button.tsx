@@ -22,11 +22,11 @@ export const CustomButton = ({
   const [loading, setLoading] = React.useState(false);
   function setClassName() {
     if (insert) {
-      return "bg-green-500 ";
+      return "border-green-500 text-green-500";
     } else if (deleted) {
-      return "bg-red-500";
+      return "border-red-500 text-red-500";
     } else if (edit) {
-      return "bg-orange-500";
+      return "border-orange-500 text-orange-500";
     }
   }
 
@@ -54,7 +54,7 @@ export const CustomButton = ({
     <button
       className={`${
         loading ? "bg-gray-500" : setClassName()
-      } p-2 self-stretch min-w-[100px]`}
+      } p-2 self-stretch min-w-[100px] border-2 rounded-md`}
       onClick={handleAction}>
       {loading ? "loading..." : children}
     </button>

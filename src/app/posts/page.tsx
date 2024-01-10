@@ -58,7 +58,6 @@ const PostPage = async ({
       <SearchPost search={search} />
       <Suspense fallback={<div>loading...</div>}>
         <Posts />
-        {/* <BlogPosts data={data} /> */}
       </Suspense>
     </main>
   );

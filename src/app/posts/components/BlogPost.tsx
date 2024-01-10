@@ -14,11 +14,11 @@ const BlogPosts = ({ data }: Props) => {
 
   return (
     <div>
-      <ul className="w-full max-w-xl ">
+      <ul className="flex flex-col gap-5 w-full max-w-xl ">
         {posts.length > 0
           ? posts.map((post) => (
               <div key={post.id} className="flex justify-between gap-5">
-                <li>
+                <li className="w-full align-text-center">
                   {post.title} - {post.description}
                 </li>
                 <CustomButton deleted post={post}>
